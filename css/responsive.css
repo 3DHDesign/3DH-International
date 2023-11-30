@@ -953,6 +953,39 @@
     {
         top: 285px !important;
     }
+    .about-top{
+        padding-top: 100px !important;
+    }
+    .lead{
+        font-size: 38px !important;
+    }
+    .abBigtitle{
+        top: 95px !important;
+    }
+    .teamDeg p{
+        padding-bottom: 20px;
+    }
+    .ourwork {
+        padding-top: 65px;
+    }
+    .singleWork img {
+        height: 100%;
+        width:100%;
+    }
+    .bigTitle {
+        margin-bottom: 0px;
+    }
+    .chooseus {
+        padding-top: 20px;
+        padding-bottom: 126px;
+    }
+    .bigTitle2 {
+        margin-bottom: 32px;
+    }
+    .client {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
 }
 
 

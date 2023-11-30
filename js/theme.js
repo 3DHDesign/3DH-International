@@ -127,7 +127,8 @@
         workCarouselmobile.slick({
             centerMode : true,
             slidesToShow : 1,
-            centerPadding : '175px',
+            arrows: false,
+            centerPadding : '0',
             dots : false,
             prevArrow : '<div class="slick-prev slick-arrow"><i class="flaticon-arrows-2"></i></div>',
             nextArrow : '<div class="slick-next slick-arrow"><i class="flaticon-arrows-3"></i></div>',
@@ -136,7 +137,7 @@
                     breakpoint : 1440,
                     settings : {
                         slidesToShow : 1,
-                        centerPadding : '175px'
+                        centerPadding : '0'
                     }
                 },
                 {
@@ -150,14 +151,16 @@
                     breakpoint : 1280,
                     settings : {
                         slidesToShow : 1,
-                        centerPadding : '80px'
+                        centerPadding : '0'
                     }
                 },
                 {
                     breakpoint : 430,
                     settings : {
                         slidesToShow : 1,
-                        centerPadding : '0px'
+                        centerPadding : '0px',
+                        centerMode:true,
+                        
                     }
                 }
             ]
