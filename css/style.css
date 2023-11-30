@@ -632,6 +632,13 @@ html{
     background: rgba(0, 0, 0, .2);
     content: '';
 }
+
+/* slides */
+ 
+.mobileslides{
+    display: none;
+}
+
 #workCarousel .slick-prev, 
 #workCarousel .slick-next {
     background: #000000;
@@ -2465,3 +2472,12 @@ html{
 }
 
 
+@media only screen and (max-width: 430px) {
+    .mobileslides {
+        display: block;
+    }
+
+    .desktopslides{
+        display: none;
+    }
+}

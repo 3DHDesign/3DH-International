@@ -122,6 +122,51 @@
     }
     ;
 
+    var workCarouselmobile = $('#workCarouselmobile');
+    if(workCarouselmobile.length > 0){
+        workCarouselmobile.slick({
+            centerMode : true,
+            slidesToShow : 1,
+            centerPadding : '175px',
+            dots : false,
+            prevArrow : '<div class="slick-prev slick-arrow"><i class="flaticon-arrows-2"></i></div>',
+            nextArrow : '<div class="slick-next slick-arrow"><i class="flaticon-arrows-3"></i></div>',
+            responsive : [
+                {
+                    breakpoint : 1440,
+                    settings : {
+                        slidesToShow : 1,
+                        centerPadding : '175px'
+                    }
+                },
+                {
+                    breakpoint : 767,
+                    settings : {
+                        slidesToShow : 1,
+                        centerPadding : '0'
+                    }
+                },
+                {
+                    breakpoint : 1280,
+                    settings : {
+                        slidesToShow : 1,
+                        centerPadding : '80px'
+                    }
+                },
+                {
+                    breakpoint : 430,
+                    settings : {
+                        slidesToShow : 1,
+                        centerPadding : '0px'
+                    }
+                }
+            ]
+        });
+    }
+    ;
+
+    
+
 
     /*=======================================================================
      [05] STICKY HEADER

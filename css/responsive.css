@@ -402,7 +402,7 @@
         height: 20px;
         position: absolute;
         right: 0;
-        top: -30px;
+        top: -90px;
         width: 24px;
     }
     .mobileBar span,
@@ -416,7 +416,7 @@
     .revCon{
         text-align: center;
         width: 100vw;
-        padding: 0 15px;
+        /* padding: 0 15px; */
     }
     .revCon h2.lead{
         font-size: 45px;
@@ -943,5 +943,17 @@
         top: -67px;
     }
 }*/
+
+@media only screen and (max-width: 430px) {
+    .smallcaptionmobile
+    {
+        top: 320px !important;
+    }
+    .bigcaptionmobile 
+    {
+        top: 285px !important;
+    }
+}
+
 
 
