@@ -944,6 +944,9 @@
     }
 }*/
 
+.client-logo-mobile{
+    display: none;
+}
 @media only screen and (max-width: 430px) {
     .smallcaptionmobile
     {
@@ -985,6 +988,29 @@
     .client {
         padding-top: 50px;
         padding-bottom: 40px;
+    }
+    .singleWork.slick-active.slick-center:before{
+        background: none;
+    }
+    .client-logo-mobile{
+        display: block;
+    }
+
+    .client-logo-desktop{
+        display: none;
+    }
+    .sub-menu{
+        display: block !important;
+    }
+    .masterpieces{
+        font-size: 30px!important;
+    }
+
+    .bigTitle3 {
+        margin-bottom: 0px;
+    }
+    .websites{
+        font-size: 34px !important;
     }
 }
 

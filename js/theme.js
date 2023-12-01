@@ -130,8 +130,7 @@
             arrows: false,
             centerPadding : '0',
             dots : false,
-            prevArrow : '<div class="slick-prev slick-arrow"><i class="flaticon-arrows-2"></i></div>',
-            nextArrow : '<div class="slick-next slick-arrow"><i class="flaticon-arrows-3"></i></div>',
+            
             responsive : [
                 {
                     breakpoint : 1440,
@@ -167,6 +166,25 @@
         });
     }
     ;
+
+    $('.carousel').slick({
+        slidesToShow: 1,
+        dots:false,
+        centerMode: true,
+        centerPadding : '0',
+        arrows:false,
+        responsive : [
+            {
+                breakpoint : 430,
+                settings : {
+                    slidesToShow : 1,
+                    centerPadding : '0',
+                    centerMode:true,
+                    
+                }
+            }
+        ]
+        });
 
     
 
