@@ -693,6 +693,60 @@ padding-left: 10px;
 padding-bottom: 10px;
 margin-right: 10px;
 }
+
+ 
+.contact-form h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none; /* Remove the border */
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: none; /* Remove the default input focus outline */
+}
+
+.contact-form textarea {
+    height: 100px;
+    border: none; /* Remove the border */
+    border-bottom: 2px solid #000;
+    outline: none; /* Remove the default input focus outline */
+}
+
+.contact-form input[type="submit"] {
+    background-color: #eb008b;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #c9007d; /* Adjust the hover color as needed */
+}
+
+
+/* .contact-form input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #eb008b;
+    
+} */
 /*=======================================================================
 [07] CHOOSE US
 =========================================================================*/
@@ -1068,8 +1122,8 @@ margin-right: 10px;
     background: #0071B9
 }
 .newsletterwid {
-    padding-top: 85px;
-    padding-left: 40px;
+    /* padding-top: 85px;
+    padding-left: 40px; */
 }
 .newsletter{
     position: relative;
