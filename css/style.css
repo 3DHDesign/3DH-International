@@ -153,10 +153,20 @@ html{
 }
 .callus p{
     margin-bottom: 0;
-    color: #fff;
+    color: #fd0060;
     letter-spacing: 2.8px;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: bold;
+}
+
+.callus a{
+    margin-bottom: 0;
+    color: #fd0060;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
 }
 .isSticky.fixedHeader{
     position: fixed;
