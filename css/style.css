@@ -2552,3 +2552,22 @@ margin-right: 10px;
         display: none;
     }
 }
+
+
+
+.company-logo img{
+    
+   width: 275px;
+   padding:30px;
+   
+}
+
+@media screen and (max-width:500px) {
+
+    .company-logo img{
+    
+        width: 150px;
+        padding:10px ;
+        
+     }
+}

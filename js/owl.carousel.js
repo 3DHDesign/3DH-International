@@ -200,9 +200,12 @@
 	 */
 	Owl.Defaults = {
 		items: 3,
-		loop: false,
+		loop: true,
 		center: false,
-
+		autoplay:true,
+		autoplayTimeout: 2000,
+    autoplayHoverPause: false,
+    autoplaySpeed: 5000,
 		mouseDrag: true,
 		touchDrag: true,
 		pullDrag: true,
@@ -490,7 +493,7 @@
 
 		// if items number is less than in body
 		if (this.settings.loop && this._items.length < this.settings.items) {
-			this.settings.loop = false;
+			this.settings.loop = true;
 		}
 
 		if (this.settings.autoWidth) {
@@ -2483,11 +2486,12 @@
 	 * @public
 	 */
 	Autoplay.Defaults = {
-		autoplay: false,
-		autoplayTimeout: 5000,
+		autoplay: true,
+		autoplayTimeout: 2000,
 		autoplayHoverPause: false,
-		autoplaySpeed: false
+		autoplaySpeed: 3000,
 	};
+	
 
 	/**
 	 * @protected

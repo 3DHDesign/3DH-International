@@ -78,7 +78,7 @@
         testmonialCaro.owlCarousel({
             items : 1,
             dots : true,
-            autoplay : false
+            autoplay : true,
         });
     }
     ;
@@ -204,108 +204,44 @@
             sticky.removeClass('fixedHeader animated slideInDown');
         }
 
-        /*====== Menu Active on Scroll ======*/
-        Scroll();
-        Scroll2();
-        Scroll3();
+       
     });
 
-    menu_a.on('click', function(){
-        if($(this).parent().hasClass('has-child'))
-        {
-            $(this).parent().children('ul').slideToggle('slow');
+    const menuItems = document.querySelectorAll('.mainMenu ul li'); // Select all menu items
+
+    function highlightActiveItem(clickedItem) {
+      // Remove "active" class from all menu items (excluding sub-menu items)
+      for (const menuItem of menuItems) {
+        if (!menuItem.classList.contains('sub-menu')) {
+          menuItem.classList.remove('active');
         }
-        bodyhtml.animate({scrollTop : $(this.hash).offset().top - 68}, 1000);
-        return false;
-    });
-
-    function Scroll(){
-
-        var contentTop = [];
-        var contentBottom = [];
-        var winTop = win.scrollTop();
-        var rangeTop = 200;
-        var rangeBottom = 500;
-        var mainmenu = $('.mainMenu');
-        var mainmenu_scroll = $('.mainMenu li.scroll');
-
-        mainmenu.find('.scroll > a').each(function(){
-            var atr = $(this).attr('href');
-            if($(atr).length > 0)
-            {
-                contentTop.push($($(this).attr('href')).offset().top);
-                contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
-            }
-        });
-
-        $.each(contentTop, function(i){
-            if(winTop > contentTop[i] - rangeTop){
-                mainmenu_scroll.removeClass('active').eq(i).addClass('active');
-            }
-        });
+      }
+    
+      // Add "active" class to the clicked item and its parent if it's a sub-menu item
+      clickedItem.classList.add('active');
+      if (clickedItem.parentNode.classList.contains('sub-menu')) {
+        clickedItem.parentNode.parentNode.classList.add('active');
+      }
     }
-    var fhscroll =  $('.fixednavHeader ul li.scroll > a, .mouseSlider2 > a');
-
-    fhscroll.on('click', function(){
-        if($(this).parent().hasClass('has-child'))
-        {
-            $(this).parent().children('ul').slideToggle('slow');
-        }
-        bodyhtml.animate({scrollTop : $(this.hash).offset().top + 10}, 1000);
-        return false;
-    });
-
-
-
-    function Scroll2(){
-
-        var contentTop = [];
-        var contentBottom = [];
-        var winTop = win.scrollTop();
-        var rangeTop = 200;
-        var rangeBottom = 500;
-        var fix_header = $('.fixednavHeader');
-        var fix_headerli = $('.fixednavHeader li.scroll, .mouseSlider2');
-
-        fix_header.find('.scroll > a').each(function(){
-            var atr = $(this).attr('href');
-            if($(atr).length > 0)
-            {
-                contentTop.push($($(this).attr('href')).offset().top);
-                contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
-            }
-        });
-        $.each(contentTop, function(i){
-            if(winTop > contentTop[i] - rangeTop){
-                fix_headerli.removeClass('active').eq(i).addClass('active');
-            }
-        });
+    
+    // Add click event listeners to all menu items
+    for (const menuItem of menuItems) {
+      menuItem.addEventListener('click', () => {
+        const clickedItem = menuItem; // Ensure the correct clicked item is used
+        highlightActiveItem(clickedItem);
+      });
     }
-
-    function Scroll3(){
-
-        var contentTop = [];
-        var contentBottom = [];
-        var winTop = win.scrollTop();
-        var rangeTop = 200;
-        var rangeBottom = 500;
-        var mm3 = $('.mainMenu_home3');
-        var mm3li = $('.mainMenu_home3 li.scroll');
-
-        mm3.find('.scroll > a').each(function(){
-            var atr = $(this).attr('href');
-            if($(atr).length > 0)
-            {
-                contentTop.push($($(this).attr('href')).offset().top);
-                contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
-            }
-        });
-        $.each(contentTop, function(i){
-            if(winTop > contentTop[i] - rangeTop){
-                mm3li.removeClass('active').eq(i).addClass('active');
-            }
-        });
+    
+    // Handle initial active state (if needed)
+    const currentUrl = window.location.href; // Get the current URL
+    const activeItem = document.querySelector('.mainMenu ul li a[href="' + currentUrl + '"]'); // Find the matching menu item for the current URL
+    if (activeItem) {
+      highlightActiveItem(activeItem.parentNode); // Highlight the parent (for sub-menu items) or the item itself
     }
+    
+    
+
+    
 
     /*=======================================================================
      [06] BACK TO TOP
